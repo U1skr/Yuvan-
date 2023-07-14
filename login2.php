@@ -1,19 +1,19 @@
 <?php 
-$uname=$_POST['UNAME'];
-$upswd=$_POST['UPSWD'];
+$uname=$_POST['uname'];
+$upswd=$_POST['upswd'];
 if (!empty($uname)&&!empty($upswd))
 { $host="localhost";
   $dbusername="root";
   $dbpassword=" ";
-  $dbname="rephel";
+  $dbname="b341";
  //create correction
  $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
  if(mysqli_connect_error())
- { die('connect error ('.mysqli_connect_errno().').mysqli_connect_error());
+ { die('Connect error ('.mysqli_connect_errno().')'.mysqli_connect_error());
  }
  else 
  {//checking the user name 
- $SELECT="SELECT UNAME1 FROM REGSTER WHERE UNAME=? LIMIT" ;
+ $SELECT="SELECT uname FROM REGSTER WHERE uname=? LIMIT 1" ;
  //PREPARE STATEMENT 
  $stmt=$conn->prepare($SELECT);
  $stmt->bind_param("s",$uname);
