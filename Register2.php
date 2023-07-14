@@ -1,5 +1,5 @@
 <?php 
-$uname=$_POST['uname'];
+$uname=$_POST['uname1'];
 $email1=$_POST['email1'];
 $upswd1=$_POST['upswd1'];
 $upswd2=$_POST['upswd2'];
